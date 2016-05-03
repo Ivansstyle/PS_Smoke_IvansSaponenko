@@ -5,10 +5,13 @@
 
 //#define EQUILIBRIUM
 
-Flow::Flow() : m_sphere_attraction_factor(5.5f) , m_decoy(0.993f),
-               m_particle_interaction_factor(0.002f), controlSphere(NULL),
-               m_equilibrium_factor(0.1f), m__sphere_interaction_r(0.18f),
+Flow::Flow() : m_sphere_attraction_factor(5.5f) ,
+               m_decoy(0.993f),
+               m_particle_interaction_factor(0.001f),
+               controlSphere(NULL),
+               m_equilibrium_factor(0.1f),
                m_friends_equilibrium_factor(),
+               m__sphere_interaction_r(0.18f),
                m_suck_blow_force(0.0002f)
 {
   fvec.ltf = Vec4(0,0,0);
@@ -484,15 +487,12 @@ void Flow::FriendsEquilibrium()
     fvec.rdb += fv->rdb * m_friends_equilibrium_factor;
     fvec.ldb += fv->ldb * m_friends_equilibrium_factor;
   }
-
-
-
-
 }
 
 Vec4 Flow::CalulateEquilibrium(Vec4 _m, Vec4 _f)
 {
-  _m;
+    //implement this after
+    return _m + _f;
 }
 
 void Flow::SetPos(Vec4 _pos)

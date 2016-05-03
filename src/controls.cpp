@@ -90,13 +90,7 @@ Event Controls::GiveControls()
 {
   return event;
 }
-char Controls::GetInput()
-{
-    if(m_e->type == SDL_TEXTINPUT)
-    return m_e->text.text[0];
-    else return NULL;
 
-}
 /*    TRASHBIN
  *
  * from Controls::KillControls()

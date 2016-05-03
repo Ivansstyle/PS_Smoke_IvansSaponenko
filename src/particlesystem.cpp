@@ -9,12 +9,12 @@
 #define RESOLUTION_HQ 3
 #define RESOLUTION_UHQ 4 //Can be slow and unpredictive
 
-ParticleSystem::ParticleSystem() : m_isInit(false),m_startTime(0.0),m_elapsedTime(0.0),
-                                 m_draw_space(true), m_draw_flows(true), m_flow_behavior(0)
-
-{
-
-}
+ParticleSystem::ParticleSystem() : m_draw_space(false),
+                                   m_draw_flows(false),
+                                   m_flow_behavior(0),
+                                   m_isInit(false),
+                                   m_startTime(0.0),
+                                   m_elapsedTime(0.0){}
 
 /**
 * @brief Scene::resize needs to set up the camera paramaters (i.e. projection matrix) and the viewport
@@ -164,9 +164,7 @@ void ParticleSystem::draw()
 
     glDisable(GL_LIGHTING);
 
-    static bool toggle = false;
-
-    if (m_draw_space) space.testDrawSpace();
+    if (m_draw_space)       space.testDrawSpace();
 
     if (m_draw_flows) space.flowspace.drawFlows();
 
