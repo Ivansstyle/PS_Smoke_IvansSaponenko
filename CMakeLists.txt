@@ -4,6 +4,8 @@ project(smoke)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#define GL_SILENCE_DEPRECATION
+add_definitions(-DGL_SILENCE_DEPRECATION=1)
 
 set(SOURCE_FILES
         src/main.cpp

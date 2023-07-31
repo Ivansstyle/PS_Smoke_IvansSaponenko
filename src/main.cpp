@@ -5,7 +5,7 @@
 /// \ref boilerplate code is based on Richards Southern example project "cube: Behold The Spinning Thing!", 2016. Thank You Richard for such a great code to start!
 ///
 ///
-#define GL_SILENCE_DEPRECATION
+
 #include <iostream>
 #define LINUX
 
