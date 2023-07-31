@@ -1,6 +1,6 @@
 #ifndef CONTROLS_H
 #define CONTROLS_H
-#include <SDL2/SDL.h>
+#include </opt/homebrew/include/SDL2/SDL.h>
 
 //#include "particlesystem.h"
 
